@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css"/>
+</head>
+<!--BODY-->
+<body>
+    <!--HEADER-->
+    <header>
+        <div class = "navbar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" class="trello-left-icon">
+                            <i class="fab fa-trello"></i>
+                            <span>Boards</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" alt = "main-logo" class="trello-main-logo">
+                            <img src="Assets/Images/trello-logo-blue.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="create-icon">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="information-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="notification-icon">
+                            <i class="far fa-bell"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="profile-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+       
+    </header>
+    <!--FIRST SECTION-->
+    <section>
+      <ul class="board-options">
+        <li class="board-name">
+            <a href="#">Boards</a>
+        </li>
+        <li class="favorite-star">
+            <a href="#" class="star-icon">
+                <i class="far fa-star"></i> |
+            </a>
+        </li>
+        <li class="personal">
+            <a href="#">Personal |</a>
+        </li>
+        <li class="private">
+            <a href="#" class="private-icon">
+                <i class="fas fa-lock"></i>
+                <span>Private</span>
+            </a>
+        </li>
+        <li class="menu">
+            <a href="#" class="show-menu">
+                <i class="fas fa-ellipsis-h"></i>
+                <span>Show Menu</span>
+            </a>
+        </li>
+      </ul>
+    </section>
+    <!--SECOND SECTION-->
+    <div id="add-list-placeholder">
+        <input type="text" name="add-list" placeholder="Add a list..."/>
+    </div>
+    <script src="JS/app.js"></script>
+</body>
+</html>
