@@ -9,6 +9,7 @@ var newInput = document.createElement ("input");
     newInput.setAttribute ("value", "Add a list...")
 var saveButton = document.createElement ("button");
     saveButton.className = "save-button";
+    //saveButton.setAttribute ("onclick", "todoList()");//
 var saveText = document.createTextNode ("Save");
 var closeButton = document.createElement ("button");
     closeButton.className = "close-button";
@@ -25,12 +26,42 @@ theForm.appendChild(closeButton);
 var oldList = document.getElementById ("add-list-placeholder");
 var newList = theForm;
 
-oldList.addEventListener("click", function (){
+oldList.addEventListener("click", function(){
     oldList.replaceWith(newList);
 })
 
-newList.addEventListener ("click", function (){
+newList.addEventListener ("click", function(){
     newInput.value = "";
+});
+
+//Function to close the window replacement//
+closeButton.addEventListener("click", function(){
+    var div = this.parentElement;
+    div.style.display = "none";
 })
+
+
+/*
+save function that didn't work out
+var unorderedList = document.createElement ("ul");
+var unorderedItem = document.createElement ("li");
+
+unorderedList.appendChild(unorderedItem);
+
+saveButton.addEventListener("click", function(){
+    unorderedItem.appendChild(newInput);
+})
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 
