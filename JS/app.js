@@ -41,18 +41,43 @@ closeButton.addEventListener("click", function(){
 })
 
 
-/*
-save function that didn't work out
-var unorderedList = document.createElement ("ul");
-var unorderedItem = document.createElement ("li");
+//Function for the save button//
+saveButton.addEventListener ("click", function(){
+    //Input you are a text and I'll keep you in a new variable//
+    var inputValue = document.getElementsByClassName ("new-input").value;
+    var inputYouAreAText = document.createTextNode (inputValue);
+    var unorderedList = document.createElement ("ul");
+    var boardsList = document.createElement ("li");
 
-unorderedList.appendChild(unorderedItem);
-
-saveButton.addEventListener("click", function(){
-    unorderedItem.appendChild(newInput);
+    boardsList.appendChild(unorderedList);
+    unorderedList.appendChild(inputYouAreAText);
 })
-*/
 
+
+
+
+
+
+
+/*
+var createNewTaskElement = function (taskString){
+    var unorderedList = document.createElement ("ul");
+    var unorderedItem = document.createElement ("li");
+    unorderedList.appendChild(unorderedItem);
+    
+}
+
+var addTask = function () {
+    var unorderedItem = createNewTaskElement (taskInput.value);
+}
+
+var clickSaveButton = function (){
+    var listItem = createNewTaskElement (taskInput.value);
+}
+
+saveButton.onclick = addTask;
+saveButton.addEventListener (click, addTask);
+*/ 
 
 
 
