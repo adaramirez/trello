@@ -50,9 +50,9 @@
                     </li>
                 </ul>
             </nav>
-        </div>
-       
+        </div> 
     </header>
+
     <!--FIRST SECTION-->
     <section>
       <ul class="board-options">
@@ -81,10 +81,19 @@
         </li>
       </ul>
     </section>
+
     <!--SECOND SECTION / ANIMATION-->
-    <div id="add-list-placeholder">
-        <input type="text" name="add-list-input" placeholder="Add a list..."/>
-    </div>
+    <section>
+        <form id="form">
+            <input type="text" placeholder="Add a list.." class="text" id="text">
+        </form>
+        <div id="container-list">
+            <i class="fa fa-times" aria-hidden="true" id="icon"></i>
+        </div>
+        <div id="container-card">
+            <h2 id="title"></h2>
+        </div>
+    </section>
     <script src="JS/app.js"></script>
 </body>
 </html>

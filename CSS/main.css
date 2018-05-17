@@ -1,10 +1,14 @@
-body {
-    background-image: url("../Assets/Images/background.jpg");
+body{
+	background-image: url(../ASSETS/images/flowers.jpg);
     background-repeat: no-repeat;
+    background-size: 1450px 800px;
     margin: 0;
     padding: 0;
 }
-/* Header*/
+
+
+
+/* HEADER*/
 header {
     background-color: rgb(134, 82, 134);
     box-sizing: border-box;
@@ -12,7 +16,6 @@ header {
     margin:0;
     padding: 0;
     width: 100%;  
-
 }
 
 /* Navegation Bar*/
@@ -47,7 +50,7 @@ header {
 }
 
 /* Why does not affect my image if I don't add the img? Ask one of my teachers*/
-.trello-main-logo img { 
+.trello-main-logo img {
     left: 42%;
     position: absolute;
     top: 5%;
@@ -100,12 +103,12 @@ header {
     border-radius: 3px;
     color: #ffffff;
     font-size: 20px;
-    padding: 6px; 
+    padding: 6px;
     position: absolute;
     right: 50px;
     text-decoration: none;
     top: 5%;
-    width: 20px;  
+    width: 20px;
 }
 
 /*Options related with the board*/
@@ -124,7 +127,7 @@ section .board-options li {
 .board-name a {
     font-weight: bold;
     left: 2%;
-    position: absolute;   
+    position: absolute;
 }
 
 .favorite-star a {
@@ -134,7 +137,7 @@ section .board-options li {
 
 .personal a {
     left: 11%;
-    position: absolute;  
+    position: absolute;
 }
 
 .private a {
@@ -147,84 +150,55 @@ section .board-options li {
     right: 1%;
 }
 
-/*SECOND SECTION / THE ANIMATION */
-
-#add-list-placeholder {   
-    box-sizing: border-box;
-    cursor: pointer;
-    display: inline-block;  
-   
-}
-
-#add-list-placeholder input {
-    background: rgb(196, 195, 195);
-    border: none;
-    border-radius: 4px;
-    color: #070707;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    height: 40px;
-    left: 22px;
+.form-click{
+    background: rgba(255, 255, 255, 0.2);
+    height: 130px;
+    padding: 20px;
+    width: 40%;
     position: relative;
-    width: 270px;   
+    bottom: 50px;
+    color: black;
 }
 
-::placeholder {
+.button{
     color: white;
-    left: 6%;
-    position: relative;
-}
-
-/* The replacement with a click */
-.the-new-form {
-    box-sizing: border-box;
-    cursor: pointer;
-    display: inline-block;
-
-}
-
-.new-input {
-    background: #ffff;
+    background: green;
+    border-radius: 10px;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
-    color: #070707;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    height: 40px;
-    left: 1%;
+    margin-top: 50px;
+    margin-left: -5px;
+}
+
+
+.icon{
+    margin-left: 20px;
+}
+
+.display{
+    display: inline-block;
     position: absolute;
-    width: 270px;  
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    width: 10%;
+    color: black;
+    margin-left: 350px;
 }
 
-/*
-This changed the color but not the position
-input.new-input.value {
-    color: rgb(20, 20, 20);
-    right: 30px;
-    position: relative;
+.title{
+    font-size: 24px;
+    color: black;
 }
-*/
 
-.save-button {
-    background-color: rgb(182, 174, 174);
-    border-radius: 4px;
-    color: #ffffff;
+.textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+}
+
+.newText{
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    left: 15%;
-    position: relative;
-    top: 50px;
+    text-underline-position: below;
 }
 
-.close-button {
-    background-color: rgb(182, 174, 174);
-    border-radius: 4px;
-    color: #ffffff;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    left: 22%;
-    position: relative;
-    top: 50px;
-}
