@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+
 	// All the elements I'm going to use
 	var text = document.getElementById('text');
 	var containerList = document.getElementById('container-list');
@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
 		  containerCard.appendChild(textArea);
 		  containerCard.appendChild(btnAdd);
 		  btnAdd.classList.add('button');
-		  btnAdd.textContent = 'Add';
+		  btnAdd.textContent = 'Save';
   
 		  //Creating the cards list
 		  btnAdd.addEventListener('click', function() {
@@ -51,7 +51,7 @@ window.addEventListener('load', function() {
 		});
 	  });
 	});
-  });
+
 
 
 
