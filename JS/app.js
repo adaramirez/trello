@@ -4,14 +4,16 @@ var containerList = document.getElementById('container-list');
 //ar icon = document.getElementById('icon');
 var containerCard = document.getElementById('container-card');
 var form = document.getElementById('form');
-var title = document.getElementById('title');
-var btnSave = document.createElement('button');//This is a global variable
+//var title = document.getElementById('title');
+var btnSave = document.createElement('button');//Saque esta variable paraconvertirla en una variable global
 
 
 // Creating event click for the list
 text.addEventListener('click',creatingList); 
 	
-function creatingList(){
+function creatingList(){/*Dejo de ser una funcion anonima ya que se necesita
+	 que solo tenga un solo evento y si la dejaba anonima se iba a estar 
+	 replicando los botones y se necesita aplicar el removeEventListener para que dejara de suceder*/
 	
 	 //containerList.classList.add('form-click');
 	var icon = document.createElement('i');
@@ -22,13 +24,15 @@ function creatingList(){
 	btnSave.classList.add('button');
 	//icon.classList.add('icon');
 	//containerList.appendChild(icon);
-	text.removeEventListener("click", creatingList) // this helps to the save button to not duplicate
+	text.removeEventListener("click", creatingList) // para que el boton guardar no se duplique
 };
-  
 // creating event click for the cards
 btnSave.addEventListener('click', function() {
-	var containerNewText = document.createElement("div"); //this div helps to save the title and the new cards
+	var containerNewText = document.createElement("div"); //Se crea un div para que puedas almacenar el titulo y las tarjetas nuevas de tarea
 	var title = document.createElement("h2")
+	//btnSave.hidden = true;
+	//text.hidden = true;
+	//text.classList.add('display');
 	title.textContent = text.value;
 	containerCard.appendChild(containerNewText)
 	containerNewText.appendChild(title);

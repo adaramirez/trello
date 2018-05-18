@@ -216,6 +216,7 @@ div .form-click {
     background: rgba(128, 97, 128, 0.658);
     border-radius: 5px;
     display: inline-block;
+    height: auto;
     margin-right: 20px;
     width: 270px;
 }
@@ -230,6 +231,3 @@ p {
     font-family: 'Quicksand', sans-serif;
 }
 
-.form {
-    background: red;
-}
