@@ -1,57 +1,65 @@
+// All the elements I'm going to use
+var text = document.getElementById('text');
+var containerList = document.getElementById('container-list');
+//ar icon = document.getElementById('icon');
+var containerCard = document.getElementById('container-card');
+var form = document.getElementById('form');
+var title = document.getElementById('title');
+var btnSave = document.createElement('button');//This is a global variable
 
-	// All the elements I'm going to use
-	var text = document.getElementById('text');
-	var containerList = document.getElementById('container-list');
-	var icon = document.getElementById('icon');
-	var containerCard = document.getElementById('container-card');
-	var form = document.getElementById('form');
-	var title = document.getElementById('title');
+
+// Creating event click for the list
+text.addEventListener('click',creatingList); 
+	
+function creatingList(){
+	
+	 //containerList.classList.add('form-click');
+	var icon = document.createElement('i');
+	icon.classList= "fa fa-times";
+	btnSave.textContent = 'Save';
+	containerList.appendChild(btnSave);
+	containerList.appendChild(icon);
+	btnSave.classList.add('button');
+	//icon.classList.add('icon');
+	//containerList.appendChild(icon);
+	text.removeEventListener("click", creatingList) // this helps to the save button to not duplicate
+};
   
-	// Creating event click for the list
-	text.addEventListener('click', function(event) {
-	  containerList.classList.add('form-click');
-	  var btnSave = document.createElement('button');
-	  btnSave.textContent = 'Save';
-	  containerList.appendChild(btnSave);
-	  btnSave.classList.add('button');
-	  icon.classList.add('icon');
-	  containerList.appendChild(icon);
+// creating event click for the cards
+btnSave.addEventListener('click', function() {
+	var containerNewText = document.createElement("div"); //this div helps to save the title and the new cards
+	var title = document.createElement("h2")
+	title.textContent = text.value;
+	containerCard.appendChild(containerNewText)
+	containerNewText.appendChild(title);
+	containerNewText.classList.add('form-click');
+
+	var newText = document.createElement('p');
+	newText.textContent = 'Add a card';
+	containerNewText.appendChild(newText);
+	containerList.classList.remove('form-click');
+
   
-	  // creating event click for the cards
-	  btnSave.addEventListener('click', function() {
-		btnSave.hidden = true;
-		text.hidden = true;
-		text.classList.add('display');
-		title.textContent = text.value;
-		containerCard.appendChild(title);
-		containerCard.classList.add('form-click');
-		var newText = document.createElement('p');
-		newText.textContent = 'Add a card';
-		containerCard.appendChild(newText);
-		containerList.classList.remove('form-click');
-  
-		// Creating the container of the cards
-		newText.addEventListener('click', function() {
-		  newText.hidden = true;
-		  var textArea = document.createElement('textarea');
-		  var btnAdd = document.createElement('button');
-		  textArea.classList.add('textarea');
-		  containerCard.appendChild(textArea);
-		  containerCard.appendChild(btnAdd);
-		  btnAdd.classList.add('button');
-		  btnAdd.textContent = 'Save';
-  
-		  //Creating the cards list
-		  btnAdd.addEventListener('click', function() {
+// Creating the container of the cards
+	newText.addEventListener('click', function() {
+		newText.hidden = true;
+		var textArea = document.createElement('textarea');
+		var btnAdd = document.createElement('button');
+		textArea.classList.add('textarea');
+		containerNewText.appendChild(textArea);
+		containerNewText.appendChild(btnAdd);
+		btnAdd.classList.add('button');
+		btnAdd.textContent = 'Add';
+
+//Creating the cards list
+  btnAdd.addEventListener('click', function() {
 			var tasks = document.createElement('p');
 			tasks.textContent = textArea.value;
-			containerCard.insertBefore(tasks, textArea);
+			containerNewText.insertBefore(tasks, textArea);
 			textArea.value = '';
 		  });
 		});
 	  });
-	});
-
 
 
 
